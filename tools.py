@@ -94,9 +94,9 @@ def check_new_entry(data_list, rules, questions, old_data_list):
             else:
                 if data in rule_value:
                     possible_cases.append(rule_key)
-            print(f"Data: {data}")
-            print(f"Rule: {rule_value}")
-        print(f"POSSIBLE CASES: {possible_cases}")
+            print(f"Data: {data}") if VERBOSE else None
+            print(f"Rule: {rule_value}") if VERBOSE else None
+        print(f"POSSIBLE CASES: {possible_cases}") if VERBOSE else None
 
         #check finished
         possible_cases = remove_duplicated_questions(questions_list=possible_cases)

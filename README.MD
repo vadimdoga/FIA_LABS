@@ -6,6 +6,8 @@ Rule types are hardcoded, questions are extracted from rules_base.
 
 ## How to run?
 run `VERBOSE=True python main.py`
+    or
+run `VERBOSE=False python main.py`
 
 ## RULES
 ### Intermediates
