@@ -8,3 +8,6 @@
 !apt-get update
 ```
 3. Run `!python /content/main.py`
+
+*For tests*
+1. Run `python3 -m pytest test.py`
