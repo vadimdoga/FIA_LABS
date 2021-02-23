@@ -37,15 +37,10 @@ def prepare_data():
 
     apt_data = read_csv(file_path='apt_data.csv')
 
-    apt_data.dropna(inplace=True)
-    apt_data = apt_data.drop('unknown_0', axis=1)
-    apt_data = apt_data.drop('unknown_1', axis=1)
-    apt_data = apt_data.drop('unknown_2', axis=1)
-
     apt_data.info()
 
-    X = apt_data.drop(['median_complex_value'],axis=1)
-    Y = apt_data['median_complex_value']
+    Y = apt_data.iloc[:, 8].values
+    X = apt_data.drop(['median_complex_value'], axis=1)
 
     X_train, X_test, Y_train, Y_test=train_test_split(X, Y, test_size=0.2)
 
