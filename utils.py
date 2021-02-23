@@ -54,19 +54,21 @@ def create_model():
 
 def train_model(model, X_train, Y_train, X_test, Y_test):
     model.fit(X_train, Y_train)
-    print(f"Accuracy Score: {model.score(X_train, Y_train)}")
+    accuracy = model.score(X_train, Y_train)
 
     prediction = model.predict(X_test)
 
+    #prepare data for plot
     res = pd.DataFrame({'Predicted':prediction,'Actual':Y_test})
     res = res.reset_index()
     res = res.drop(['index'],axis=1)
 
     print(res)
 
+    #plot
     plt.plot(res[:30])
     plt.legend(['Actual', 'Predicted'])
     plt.savefig('filename.svg')
 
-    return model
+    return accuracy
 
