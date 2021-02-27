@@ -33,7 +33,10 @@ def read_csv(file_path):
 
 
 def prepare_data():
-    convert_txt_2_csv(file_path='apartmentComplexData.txt')
+    try:
+        convert_txt_2_csv(file_path='apartmentComplexData.txt')
+    except Exception as e:
+        print("Provide model file")
 
     apt_data = read_csv(file_path='apt_data.csv')
 
