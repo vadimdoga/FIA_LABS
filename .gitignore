@@ -3,3 +3,4 @@ venv
 __pycache__/
 apt_data.csv
 filename.svg
+*.txt
