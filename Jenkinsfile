@@ -25,7 +25,7 @@ pipeline {
 
     post {
         always {
-            sh 'docker stop $(docker ps -aq)'
+            sh 'docker rm -f lab'
         }
     }
 }
