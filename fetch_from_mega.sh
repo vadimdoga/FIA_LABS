@@ -85,3 +85,5 @@ fi
 file_name="${file_name//'"'/}"
 
 $CURL -s "$file_url" | openssl enc -d -aes-128-ctr -K "$hex" -iv "${raw_hex:32:16}0000000000000000" > "$file_name"
+
+echo $file_name
