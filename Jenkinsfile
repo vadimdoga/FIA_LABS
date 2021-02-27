@@ -23,9 +23,9 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            sh 'docker rm -f lab_3'
-        }
-    }
+    // post {
+    //     always {
+    //         sh 'docker rm -f lab_3'
+    //     }
+    // }
 }
