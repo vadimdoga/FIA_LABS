@@ -18,7 +18,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                sh 'docker exec -i lab sh -c "pytest test.py"'
+                sh 'docker exec -i lab sh -c "pytest test.py -v -s"'
             }
         }
     }
