@@ -5,3 +5,4 @@
 2. Jenkins (locally)
 3. ngrok (locally)
 4. MEGA (cloud storage)
+5. Docker
