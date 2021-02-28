@@ -40,10 +40,10 @@ Three steps are declared in Jenkins pipeline file:
 3. Make sure that everything is like in images bellow:
 4. Images:
 <br/>
-![alt text](./img/jenkins_conf_1.jpeg)
-![alt text](./img/jenkins_conf_2.jpeg)
-![alt text](./img/jenkins_conf_3.png)
-![alt text](./img/jenkins_conf_4.jpeg)
+![alt text](./resources/jenkins_conf_1.jpeg)
+![alt text](./resources/jenkins_conf_2.jpeg)
+![alt text](./resources/jenkins_conf_3.png)
+![alt text](./resources/jenkins_conf_4.jpeg)
 5. Press Save
 
 ## Github config
