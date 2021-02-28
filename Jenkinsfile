@@ -19,13 +19,14 @@ pipeline {
         stage('test') {
             steps {
                 sh 'docker exec -i lab sh -c "pytest test.py -v -s"'
+                sh 'docker inspect lab'
             }
         }
     }
 
-    post {
-        always {
-            sh 'docker rm -f lab'
-        }
-    }
+    // post {
+    //     always {
+    //         sh 'docker rm -f lab'
+    //     }
+    // }
 }
