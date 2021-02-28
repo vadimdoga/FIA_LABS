@@ -9,17 +9,22 @@ pipeline {
                 sh './fetch_from_mega.sh ${FILE_URL}'
             }
         }
-        stage('build') {
-            steps {
-                sh 'docker build -t lab_3:${BUILD_NUMBER} .'
-                sh 'docker tag lab_3:${BUILD_NUMBER} lab_3:latest'
-                sh 'docker run -d -i --name lab --rm lab_3'
-            }
-        }
+        // stage('build') {
+        //     steps {
+        //         sh 'docker build -t lab_3:${BUILD_NUMBER} .'
+        //         sh 'docker tag lab_3:${BUILD_NUMBER} lab_3:latest'
+        //         sh 'docker run -d -i --name lab --rm lab_3'
+        //     }
+        // }
+        // stage('test') {
+        //     steps {
+        //         sh 'docker exec -i lab sh -c "pytest test.py -v -s"'
+        //         sh 'docker inspect lab'
+        //     }
+        // }
         stage('test') {
             steps {
-                sh 'docker exec -i lab sh -c "pytest test.py -v -s"'
-                sh 'docker inspect lab'
+                sh 'pytest test.py -s -v'
             }
         }
     }
