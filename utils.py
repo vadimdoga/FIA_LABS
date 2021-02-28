@@ -1,7 +1,5 @@
 import pandas as pd
 import csv
-import numpy as np
-import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
 from sklearn.linear_model import LinearRegression
@@ -67,11 +65,6 @@ def train_model(model, X_train, Y_train, X_test, Y_test):
     res = res.drop(['index'],axis=1)
 
     print(res)
-
-    #plot
-    plt.plot(res[:30])
-    plt.legend(['Actual', 'Predicted'])
-    plt.savefig('filename.svg')
 
     return accuracy
 
