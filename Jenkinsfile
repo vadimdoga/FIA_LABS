@@ -22,9 +22,14 @@ pipeline {
         //         sh 'docker inspect lab'
         //     }
         // }
+        stage('build') {
+            steps {
+                sh 'pip install -r requirements.py'
+            }
+        }
         stage('test') {
             steps {
-                sh 'pytest test.py -s -v'
+                sh 'python -m pytest test.py -s -v'
             }
         }
     }
