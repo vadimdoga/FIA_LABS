@@ -39,6 +39,11 @@ def prepare_data():
 
     apt_data.info()
 
+    # if remove columns then accuracy lowers
+    # apt_data = apt_data.drop(['unknown_0'], axis=1)
+    # apt_data = apt_data.drop(['unknown_1'], axis=1)
+    # apt_data = apt_data.drop(['unknown_2'], axis=1)
+
     Y = apt_data.iloc[:, 8].values
     X = apt_data.drop(['median_complex_value'], axis=1)
 
